@@ -1,0 +1,13 @@
+{
+  "name": "scrap-resource",
+  "version": "0.1.0",
+  "title": "Scrap Resource",
+  "author": "RedRafe",
+  "source": "https://github.com/RedRafe/scrap-resource",
+  "homepage": "https://mods.factorio.com/user/RedRafe",
+  "factorio_version": "1.1",
+  "dependencies": [
+    "base >= 1.1.0"
+  ],
+  "description": "Adds scrap as a new resource to be further processed and downgraded into other products"
+}
