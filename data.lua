@@ -4,8 +4,8 @@ data:extend({
   {
     type = "resource",
     name = "scrap",
-    icon = "__base__/graphics/icons/wall-remnants.png",
-    icon_mipmaps = 4,
+    icon = "__scrap-resource__/graphics/icon-scrap.png",
+    icon_mipmaps = 1,
     icon_size = 64,
     flags = {"placeable-neutral"},
     order="a-b-a",
@@ -28,7 +28,7 @@ data:extend({
         { amount = 1, probability = 0.02, name = "battery",               },
         { amount = 1, probability = 0.05, name = "crude-oil-barrel",      },
         { amount = 1, probability = 0.05, name = "stone",                 },
-        { amount = 1, probability = 0.01, name = "uranium-238",           },
+        { amount = 1, probability = 0.01, name = "uranium-ore",           },
         { amount = 1, probability = 0.14, name = "iron-gear-wheel",       },
         { amount = 1, probability = 0.02, name = "copper-cable",          },
       }
@@ -53,11 +53,13 @@ data:extend({
           priority = "extra-high",
           size = 64,
           variation_count = 1,
-          frame_count = 12,
+          frame_count = 100,
+          line_length = 10,
+          --scale = 0.95,
         }
       },
-    mining_visualisation_tint = {r = 0.814, g = 1.000, b = 0.499, a = 1.000},
-    map_color = {0.7, 0, 0.7}
+    mining_visualisation_tint = {51, 51, 51},
+    map_color = {51, 51, 51}
   },
   {
     type = "autoplace-control",

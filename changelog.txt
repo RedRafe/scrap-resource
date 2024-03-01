@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2024-03-01
+  Changes:
+    - Improved scrap ore graphics & icon
+    - Changed scrap ore map tint from purple to black/grey
+    - Changed mining color tint from green to black/grey
+    - Changed 'uranium-238' -> 'uranium-ore' (in order to get the U-235)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2024-02-24
   Info:
