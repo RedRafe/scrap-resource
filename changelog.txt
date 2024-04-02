@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2024-03-01
+  Changes:
+    - Added scrap recycling: mining outputs 'Scrap' which can be further processed into subcomponents
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2024-03-01
   Changes:
