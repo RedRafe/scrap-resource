@@ -7,7 +7,8 @@
   "homepage": "https://mods.factorio.com/user/RedRafe",
   "factorio_version": "1.1",
   "dependencies": [
-    "base >= 1.1.0"
+    "base >= 1.1.0",
+    "(?) space-exploration"
   ],
   "description": "Adds scrap as a new resource to be further processed and downgraded into other products"
 }

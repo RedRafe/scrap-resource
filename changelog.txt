@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
-Date: 2024-03-01
+Date: 2024-03-03
   Changes:
     - Added scrap recycling: mining outputs 'Scrap' which can be further processed into subcomponents
+    - Added compatibility with Space Exploration
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2024-03-01

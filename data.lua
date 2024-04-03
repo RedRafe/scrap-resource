@@ -78,6 +78,9 @@ data:extend({
   }
 })
 
+se_core_fragment_resources = se_core_fragment_resources or {}
+se_core_fragment_resources['scrap'] = { multiplier = 0 }
+
 if settings.startup['sr:scrap_recycling'].value then
   local scrap = data.raw.resource.scrap
 
