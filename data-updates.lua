@@ -25,3 +25,7 @@ if mods['space-exploration'] then
     end
   end
 end
+
+if mods['janky-quality'] and scrap_recipe() then
+  data.raw.recipe['scrap-recycling'].category = 'jq-recycling'
+end

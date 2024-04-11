@@ -32,3 +32,12 @@ if settings.startup['sr:scrap_recycling'].value then
     end
   end
 end
+
+if mods['janky-quality'] and scrap_recipe() then
+  local id = 'jq-recycling-scrap'
+  for name, recipe in pairs(data.raw.recipe) do
+    if name:sub(1, #id) == id then
+      data.raw.recipe[name] = nil
+    end
+  end
+end

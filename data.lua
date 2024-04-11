@@ -1,3 +1,7 @@
+function scrap_recipe()
+  return settings.startup['sr:scrap_recycling'].value
+end
+
 local resource_autoplace = require('__core__/lualib/resource-autoplace')
 
 data:extend({
@@ -5,9 +9,9 @@ data:extend({
   {
     type = 'resource',
     name = 'scrap',
-    icon = '__scrap-resource__/graphics/icon-scrap.png',
+    icon = '__scrap-resource__/graphics/hr-icon-scrap.png',
     icon_mipmaps = 1,
-    icon_size = 64,
+    icon_size = 159,
     flags = {'placeable-neutral'},
     order='a-b-a',
     subgroup = 'raw-resource',
@@ -50,13 +54,22 @@ data:extend({
     stages =
       { 
         {
-          filename = '__scrap-resource__/graphics/scrap.png',
+          filename = '__scrap-resource__/graphics/hd-scrap.png',
           priority = 'extra-high',
-          size = 64,
+          size = 128,
           variation_count = 1,
-          frame_count = 100,
-          line_length = 10,
-          --scale = 0.95,
+          frame_count = 64,
+          line_length = 8,
+          scale = 0.5,
+          hr_version = {
+            filename = '__scrap-resource__/graphics/hd-scrap.png',
+            priority = 'extra-high',
+            size = 128,
+            variation_count = 1,
+            frame_count = 64,
+            line_length = 8,
+            scale = 0.5,
+          }
         }
       },
     mining_visualisation_tint = {51, 51, 51},
@@ -81,7 +94,7 @@ data:extend({
 se_core_fragment_resources = se_core_fragment_resources or {}
 se_core_fragment_resources['scrap'] = { multiplier = 0 }
 
-if settings.startup['sr:scrap_recycling'].value then
+if scrap_recipe() then
   local scrap = data.raw.resource.scrap
 
   data:extend({
@@ -89,9 +102,9 @@ if settings.startup['sr:scrap_recycling'].value then
     {
       name = 'scrap',
       type = 'item',
-      icon = '__scrap-resource__/graphics/icon-scrap.png',
+      icon = '__scrap-resource__/graphics/hr-icon-scrap.png',
       icon_mipmaps = 1,
-      icon_size = 64,
+      icon_size = 159,
       order='g[scrap]',
       subgroup = 'raw-resource',
       stack_size = 50,
@@ -103,9 +116,9 @@ if settings.startup['sr:scrap_recycling'].value then
       enabled = true,
       ingredients = {{ 'scrap', 1 }},
       results = table.deepcopy(scrap.minable.results),
-      icon = '__scrap-resource__/graphics/icon-scrap.png',
+      icon = '__scrap-resource__/graphics/hr-icon-scrap.png',
       icon_mipmaps = 1,
-      icon_size = 64,
+      icon_size = 159,
       category = 'smelting',
       energy_required = 3.2,
       main_product = '',
