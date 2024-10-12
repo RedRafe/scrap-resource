@@ -29,6 +29,17 @@ if mods['space-exploration'] then
       table.remove(data.raw.recipe['se-core-fragment-omni'].results, i)
     end
   end
+else
+  if mods['Krastorio2'] then
+    local k2_recipe = data.raw.recipe['kr-vc-scrap']
+    if k2_recipe then
+      k2_recipe.subgroup = 'raw-material'
+      k2_recipe.results = table.deepcopy(data.raw.recipe['scrap-recycling'].results)
+
+      local crusher = data.raw.furnace['kr-crusher']
+      crusher.result_inventory_size = math.max(crusher.result_inventory_size, table_size(k2_recipe.results))
+    end
+  end
 end
 
 if mods['janky-quality'] and scrap_recipe() then
