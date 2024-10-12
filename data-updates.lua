@@ -3,6 +3,11 @@ if mods['space-exploration'] then
   data.raw.item.scrap = nil
   data.raw.recipe['scrap-recycling'] = nil
 
+  -- Remove K2 crusher void recipe
+  if mods['Krastorio2'] then
+    data.raw.recipe['kr-vc-scrap'] = nil
+  end
+
   -- Update resource
   local resource = data.raw.resource.scrap
   if resource and resource.minable then
