@@ -1,6 +1,6 @@
 data:extend({
   {
-		name = 'sr:scrap_recycling',
+		name = 'sr_scrap_recycling',
 		type = 'bool-setting',
 		setting_type = 'startup',
 		default_value = false,

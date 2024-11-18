@@ -14,7 +14,7 @@ if scrap and scrap.minable then
 end
 
 -- check # of output slots if recipe is enabled
-if settings.startup['sr:scrap_recycling'].value then
+if settings.startup['sr_scrap_recycling'].value then
   local recipe = data.raw.recipe['scrap-recycling']
   if recipe then
     local category = recipe and recipe.category
